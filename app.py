@@ -1,7 +1,16 @@
-from llm import llm
+from graph.state import GrantState
 
-response = llm.invoke(
-    "Say hello from GrantGuard."
-)
+state: GrantState = {
+    "application": {
+        "organization": "GreenFuture Foundation",
+        "requested_amount": 1500000,
+        "registration_valid": True,
+        "timeline": "12 months",
+        "beneficiaries": 300,
+    },
+    "plan": "",
+    "worker_result": "",
+    "final_decision": "",
+}
 
-print(response.content)
+print(state)
