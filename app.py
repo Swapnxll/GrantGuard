@@ -1,4 +1,6 @@
 from graph.state import GrantState
+from agents.planner import planner_agent
+
 
 state: GrantState = {
     "application": {
@@ -8,9 +10,12 @@ state: GrantState = {
         "timeline": "12 months",
         "beneficiaries": 300,
     },
-    "plan": "",
+    "plan": None,
     "worker_result": "",
     "final_decision": "",
 }
 
-print(state)
+state = planner_agent(state)
+
+print("\nExecution Plan\n")
+print(state["plan"])

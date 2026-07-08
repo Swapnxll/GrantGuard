@@ -1,15 +1,15 @@
 from typing_extensions import TypedDict
-
+from models.planner_models import ExecutionPlan
 
 class GrantState(TypedDict):
     # Original application
     application: dict
 
     # Planner output
-    plan: str
+    plan: ExecutionPlan | None
 
     # Worker output
-    worker_result: str
+    worker_result: dict
 
     # Final decision
     final_decision: str
