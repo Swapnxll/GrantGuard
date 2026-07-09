@@ -7,7 +7,7 @@ structured_llm = llm.with_structured_output(ExecutionPlan)
 
 
 def planner_agent(state: GrantState):
-
+    print("\n===== Planner Agent =====")
     application = state["application"]
 
     prompt = f"""

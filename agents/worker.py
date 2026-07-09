@@ -13,7 +13,7 @@ TOOLS = {
 
 
 def worker_agent(state: GrantState):
-
+    print("\n===== Worker Agent =====")
     application = state["application"]
 
     results = {}
