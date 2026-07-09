@@ -7,9 +7,9 @@ class PlanStep(BaseModel):
         "registration",
         "eligibility",
         "budget",
-        "policy_rag",
-        "duplicate",
-        "risk",
+        # "policy_rag",
+        # "duplicate",
+        # "risk",
     ]
 
     reason: str = Field(

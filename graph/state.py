@@ -6,6 +6,7 @@ from models.planner_models import ExecutionPlan
 from models.review_models import QualityReview
 from models.security_models import SecurityReview
 from models.tool_models import ToolResult
+from models.judge_models import GrantDecision
 
 
 class GrantState(TypedDict):
@@ -28,7 +29,7 @@ class GrantState(TypedDict):
     security_review: Optional[SecurityReview]
 
     # Final Judge decision (to be added later)
-    final_decision: Optional[str]
+    final_decision: Optional[GrantDecision]
 
 # Why not use a Python class?
 
