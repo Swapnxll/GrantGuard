@@ -41,3 +41,5 @@ class QualityReview(BaseModel):
     weaknesses: list[str] = Field(default_factory=list)
 
     summary: str
+
+

@@ -4,6 +4,7 @@ from typing_extensions import TypedDict
 from models.application import GrantApplication
 from models.planner_models import ExecutionPlan
 from models.review_models import QualityReview
+from models.security_models import SecurityReview
 from models.tool_models import ToolResult
 
 
@@ -22,6 +23,9 @@ class GrantState(TypedDict):
 
     # Quality Reviewer output
     review: Optional[QualityReview]
+
+    # Security Reviewer output
+    security_review: Optional[SecurityReview]
 
     # Final Judge decision (to be added later)
     final_decision: Optional[str]
