@@ -2,9 +2,9 @@ from pathlib import Path
 
 from langchain_chroma import Chroma
 
-from embeddings import embedding_model
-from loader import load_policy_documents
-from splitter import split_documents
+from .embeddings import embedding_model
+from .loader import load_policy_documents
+from .splitter import split_documents
 
 
 VECTOR_DB_DIR = Path(__file__).parent / "vector_db"

@@ -3,7 +3,7 @@ from tools.budget import budget_tool
 from tools.eligibility import eligibility_tool
 from graph.state import GrantState
 from models.tool_models import ToolResult
-
+from tools.policy_rag import policy_rag_tool
 
 # TOOLS = {
 #     "registration": registration_tool,
@@ -48,6 +48,7 @@ TOOLS = {
     "registration": registration_tool,
     "budget": budget_tool,
     "eligibility": eligibility_tool,
+    "policy_rag": policy_rag_tool,
 }
 
 

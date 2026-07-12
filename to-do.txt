@@ -38,3 +38,8 @@ Embeddings
 Duplicate document checks
 
 Shows performance optimization.
+
+
+
+
+RETRY METHODS IF TOOL FAILS

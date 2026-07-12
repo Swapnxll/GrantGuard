@@ -7,7 +7,7 @@ class PlanStep(BaseModel):
         "registration",
         "eligibility",
         "budget",
-        # "policy_rag",
+        "policy_rag",
         # "duplicate",
         # "risk",
     ]

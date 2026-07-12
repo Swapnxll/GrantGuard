@@ -5,5 +5,5 @@ def main():
 
     print(f"Indexed {db._collection.count()} chunks")
 
-if __name__ == "__main__":
-    main()
+# if __name__ == "__main__":
+#     main()
