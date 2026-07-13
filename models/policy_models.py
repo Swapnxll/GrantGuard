@@ -1,4 +1,4 @@
-from typing import List
+from typing import List, Literal
 from pydantic import BaseModel, Field
 
 
@@ -11,8 +11,12 @@ class PolicyFinding(BaseModel):
         description="Name of the policy document."
     )
 
-    status: str = Field(
-        description="COMPLIANT, NON_COMPLIANT, or NEEDS_REVIEW."
+    status: Literal[
+        "COMPLIANT",
+        "NEEDS_REVIEW",
+        "NON_COMPLIANT",
+    ] = Field(
+        description="Compliance status for this policy."
     )
 
     explanation: str = Field(
@@ -29,13 +33,22 @@ class PolicyReview(BaseModel):
     Overall policy compliance review.
     """
 
-    compliant: bool = Field(
-        description="Whether the application complies with all relevant policies."
+    overall_status: Literal[
+        "COMPLIANT",
+        "NEEDS_REVIEW",
+        "NON_COMPLIANT",
+    ] = Field(
+        description=(
+            "Overall policy assessment. "
+            "COMPLIANT if all policies are satisfied, "
+            "NEEDS_REVIEW if manual review is required, "
+            "NON_COMPLIANT if one or more critical policy violations exist."
+        )
     )
 
     findings: List[PolicyFinding] = Field(
         default_factory=list,
-        description="List of policy findings."
+        description="Only policy findings requiring reviewer attention."
     )
 
     summary: str = Field(

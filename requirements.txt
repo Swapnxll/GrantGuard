@@ -11,3 +11,24 @@ python-dotenv
 pydantic
 
 typing_extensions
+
+fastapi
+uvicorn
+langchain
+langchain-core
+langchain-community
+langchain-chroma
+langchain-google-genai
+langchain-huggingface
+langchain-text-splitters
+langgraph
+chromadb
+sentence-transformers
+google-generativeai
+google-genai
+pydantic
+pydantic-settings
+python-dotenv
+pymupdf
+pypdf
+bcrypt
