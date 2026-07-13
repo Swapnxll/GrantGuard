@@ -185,7 +185,7 @@ APPROVED
 # Select Scenario
 # ==========================================================
 
-ACTIVE_TEST = "security_failure"
+ACTIVE_TEST = "valid"
 
 # Examples:
 # ACTIVE_TEST = "prompt_injection"
