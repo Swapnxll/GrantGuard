@@ -18,6 +18,7 @@ langchain
 langchain-core
 langchain-community
 langchain-chroma
+langchain-groq
 langchain-google-genai
 langchain-huggingface
 langchain-text-splitters
