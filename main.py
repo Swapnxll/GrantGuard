@@ -1,17 +1,20 @@
+from typing import Any
+
 from fastapi import FastAPI
+from fastapi.encoders import jsonable_encoder
 from fastapi.middleware.cors import CORSMiddleware
+
 from graph.workflow import graph
-from graph.state import GrantState
 
 app = FastAPI(
-    title="Grant Review API",
-    version="1.0.0"
+    title="GrantGuard API",
+    version="1.0.0",
 )
 
-# Allow React frontend
+# Allow your frontend to call the API
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173"],
+    allow_origins=["*"],  # Restrict this in production
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -19,16 +22,14 @@ app.add_middleware(
 
 
 @app.get("/")
-def home():
-    return {
-        "message": "Grant Review API is running"
-    }
+def health():
+    return {"status": "running"}
 
 
-@app.post("/submit")
-async def submit_application(application: dict):
+@app.post("/evaluate")
+def evaluate(application: dict[str, Any]):
 
-    state: GrantState = {
+    state = {
         "application": application,
         "plan": None,
         "tool_results": {},
@@ -38,11 +39,6 @@ async def submit_application(application: dict):
         "final_decision": "",
     }
 
-    result = await graph.ainvoke(state)
+    result = graph.invoke(state)
 
-    return {
-        "decision": result["final_decision"],
-        "review": result["review"],
-        "security_review": result["security_review"],
-        "tool_results": result["tool_results"],
-    }
+    return jsonable_encoder(result)

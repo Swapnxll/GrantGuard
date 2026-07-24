@@ -103,13 +103,7 @@ District Health Department, Primary Health Centres, Village Councils and communi
   declaration_signed: true,
 };
 
-function Input({
-  label,
-  name,
-  value,
-  onChange,
-  type = "text",
-}) {
+function Input({ label, name, value, onChange, type = "text" }) {
   return (
     <div>
       <label className="block mb-2 font-medium text-gray-700">
@@ -166,17 +160,17 @@ export default function App() {
     });
   };
   const handleAutoFill = (e) => {
-  const checked = e.target.checked;
+    const checked = e.target.checked;
 
-  setAutoFill(checked);
+    setAutoFill(checked);
 
-  if (checked) {
-    // clone so React gets a fresh object
-    setFormData(JSON.parse(JSON.stringify(VALID_APPLICATION)));
-  } else {
-    setFormData(JSON.parse(JSON.stringify(EMPTY_FORM)));
-  }
-};
+    if (checked) {
+      // clone so React gets a fresh object
+      setFormData(JSON.parse(JSON.stringify(VALID_APPLICATION)));
+    } else {
+      setFormData(JSON.parse(JSON.stringify(EMPTY_FORM)));
+    }
+  };
   const handleBudget = (e) => {
     setFormData({
       ...formData,
@@ -188,47 +182,43 @@ export default function App() {
   };
 
   const submit = (e) => {
-  e.preventDefault();
+    e.preventDefault();
     //make a post call to the backend with the form data as dict
-  fetch("http://localhost:8000/submit", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(formData),
-  })
-    .then((response) => response.json())
-    .then((data) => {
-      console.log(data);
-    });
+    fetch("http://localhost:8000/evaluate", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data);
+      });
 
-  // Reset the form
-  setFormData(JSON.parse(JSON.stringify(EMPTY_FORM)));
+    // Reset the form
+    setFormData(JSON.parse(JSON.stringify(EMPTY_FORM)));
 
-  // Uncheck the auto-fill checkbox
-  setAutoFill(false);
-};
+    // Uncheck the auto-fill checkbox
+    setAutoFill(false);
+  };
 
   return (
     <div className="min-h-screen bg-pink-100 py-10 px-5">
       <div className="max-w-5xl mx-auto bg-pink-50 shadow-xl rounded-xl p-10">
-
         <h1 className="text-4xl font-bold text-center mb-10">
           NGO Grant Application
         </h1>
 
         <form onSubmit={submit} className="space-y-10">
-
           {/* Organization */}
 
           <section>
-
             <h2 className="text-2xl font-semibold mb-6 border-b pb-2">
               Organization Details
             </h2>
 
             <div className="grid md:grid-cols-2 gap-6">
-
               <Input
                 label="Organization Name"
                 name="organization"
@@ -258,21 +248,17 @@ export default function App() {
                 value={formData.years_operating}
                 onChange={handleChange}
               />
-
             </div>
-
           </section>
 
           {/* Contact */}
 
           <section>
-
             <h2 className="text-2xl font-semibold mb-6 border-b pb-2">
               Contact Information
             </h2>
 
             <div className="grid md:grid-cols-2 gap-6">
-
               <Input
                 label="Contact Person"
                 name="contact_person"
@@ -301,21 +287,17 @@ export default function App() {
                 value={formData.phone}
                 onChange={handleChange}
               />
-
             </div>
-
           </section>
 
           {/* Project */}
 
           <section>
-
             <h2 className="text-2xl font-semibold mb-6 border-b pb-2">
               Project Details
             </h2>
 
             <div className="grid md:grid-cols-2 gap-6">
-
               <Input
                 label="Project Title"
                 name="project_title"
@@ -352,11 +334,9 @@ export default function App() {
                 value={formData.timeline}
                 onChange={handleChange}
               />
-
             </div>
 
             <div className="mt-6">
-
               <label className="block mb-2 font-medium">
                 Project Description
                 <span className="text-red-500 ml-1">*</span>
@@ -370,24 +350,19 @@ export default function App() {
                 onChange={handleChange}
                 className="w-full border rounded-lg p-4 focus:border-blue-500 focus:outline-none"
               />
-
             </div>
-
           </section>
 
           {/* Budget */}
 
           <section>
-
             <h2 className="text-2xl font-semibold mb-6 border-b pb-2">
               Budget Breakdown
             </h2>
 
             <div className="grid md:grid-cols-2 gap-6">
-
               {Object.keys(formData.budget).map((item) => (
                 <div key={item}>
-
                   <label className="block mb-2 capitalize font-medium">
                     {item.replaceAll("_", " ")}
                   </label>
@@ -399,27 +374,21 @@ export default function App() {
                     onChange={handleBudget}
                     className="w-full border rounded-lg p-3 focus:border-blue-500 focus:outline-none"
                   />
-
                 </div>
               ))}
-
             </div>
-
           </section>
 
           {/* Documents */}
 
           <section>
-
             <h2 className="text-2xl font-semibold mb-6 border-b pb-2">
               Documents Submitted
             </h2>
 
             <div className="grid md:grid-cols-2 gap-3">
-
               {documentsList.map((doc) => (
                 <label key={doc} className="flex items-center gap-3">
-
                   <input
                     type="checkbox"
                     value={doc}
@@ -429,54 +398,43 @@ export default function App() {
                   />
 
                   {doc}
-
                 </label>
               ))}
-
             </div>
-
           </section>
 
           {/* Declaration */}
 
           <div className="flex items-center gap-3">
-
             <input
-                type="checkbox"
-                name="declaration_signed"
-                checked={formData.declaration_signed}
-                onChange={handleChange}
-                required
-              />
+              type="checkbox"
+              name="declaration_signed"
+              checked={formData.declaration_signed}
+              onChange={handleChange}
+              required
+            />
 
-            <label>
-              I declare that the information provided is accurate.
-            </label>
-
+            <label>I declare that the information provided is accurate.</label>
           </div>
-              <div className="flex items-center gap-3 rounded-lg bg-blue-50 p-4 border border-blue-200">
+          <div className="flex items-center gap-3 rounded-lg bg-blue-50 p-4 border border-blue-200">
+            <input
+              type="checkbox"
+              checked={autoFill}
+              onChange={handleAutoFill}
+              className="h-5 w-5"
+            />
 
-                <input
-                  type="checkbox"
-                  checked={autoFill}
-                  onChange={handleAutoFill}
-                  className="h-5 w-5"
-                />
-
-                <label className="font-medium text-blue-900 cursor-pointer">
-                  Auto-fill the form using the sample NGO application
-                </label>
-
-              </div>
+            <label className="font-medium text-blue-900 cursor-pointer">
+              Auto-fill the form using the sample NGO application
+            </label>
+          </div>
           <button
             type="submit"
             className="w-full bg-black hover:bg-black-700 text-white font-semibold py-4 rounded-lg transition"
           >
             Submit Application
           </button>
-
         </form>
-
       </div>
     </div>
   );

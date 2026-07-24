@@ -335,7 +335,7 @@ print(f"Summary                 : {security.summary}")
 # Final Graph State (Optional)
 # ==========================================================
 decision = result["final_decision"]
-
+print(decision)
 print("\n===== FINAL DECISION =====")
 print(f"Decision         : {decision.decision}")
 print(f"Confidence       : {decision.confidence}")
