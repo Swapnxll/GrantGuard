@@ -12,7 +12,7 @@ export default function App() {
 
     try {
       // Ping backend
-      await fetch("https://grand-guard-server.onrender.com");
+      await fetch("https://grantguard-g5p2.onrender.com");
 
       toast.success("Agent is online. Starting evaluation...", {
         id: loadingToast,
