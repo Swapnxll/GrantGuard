@@ -16,7 +16,9 @@ class PlanStep(BaseModel):
     reason: str = Field(
         description="Why this tool should be executed."
     )
-    required: bool = True
+    required: bool = Field(
+    description="Whether this tool must be executed."
+)
 
 
 class ExecutionPlan(BaseModel):
