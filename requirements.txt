@@ -33,3 +33,7 @@ python-dotenv
 pymupdf
 pypdf
 bcrypt
+sqlalchemy 
+python-jose[cryptography] 
+
+

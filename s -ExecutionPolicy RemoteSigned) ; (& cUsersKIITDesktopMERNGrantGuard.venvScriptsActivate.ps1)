@@ -1,0 +1,107 @@
+[33mcommit 94dfb19b099db4dbc7a6afbb280461e05fcde1bd[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: Swapnxll <130583218+Swapnxll@users.noreply.github.com>
+Date:   Sat Jul 25 12:04:54 2026 +0530
+
+    frontend added-1
+
+[33mcommit 168742d4d711c2c8078afad672e3ed4e387708e6[m
+Author: Swapnxll <130583218+Swapnxll@users.noreply.github.com>
+Date:   Sat Jul 25 11:56:54 2026 +0530
+
+    frontend added
+
+[33mcommit 5b74958fca347deae2b0a25fe1eb15623bffa032[m
+Author: Swapnxll <130583218+Swapnxll@users.noreply.github.com>
+Date:   Fri Jul 24 16:47:56 2026 +0530
+
+    fastapi done
+
+[33mcommit 92a21d8a6963269abf379e5e44d7562328286ff2[m
+Author: Swapnxll <130583218+Swapnxll@users.noreply.github.com>
+Date:   Tue Jul 14 20:44:44 2026 +0530
+
+    Added Dev Container Folder
+
+[33mcommit b228ac3f353e0f3f0839475bafd05bbf98e9ed48[m
+Author: Swapnxll <130583218+Swapnxll@users.noreply.github.com>
+Date:   Tue Jul 14 20:37:50 2026 +0530
+
+    langchain
+
+[33mcommit aa4dc3a6e915dc9f589ae4d2b51bb04e8807e1cc[m
+Author: Swapnxll <130583218+Swapnxll@users.noreply.github.com>
+Date:   Tue Jul 14 20:32:01 2026 +0530
+
+    streamlit file added
+
+[33mcommit 6281a24b2dc0f0ab2ffdc66cf47dae946c65984b[m
+Author: Aadya Pandey <aadyapandey2004@gmail.com>
+Date:   Tue Jul 14 02:49:33 2026 +0530
+
+    Frontend and Backend updated
+
+[33mcommit 507997163432e56e1e835d6a11dd48bc2b1ca0d8[m
+Author: Swapnxll <130583218+Swapnxll@users.noreply.github.com>
+Date:   Tue Jul 14 00:25:08 2026 +0530
+
+    final touches
+
+[33mcommit 84b6cd42ccb636d7ef15b3909f643fa055af9086[m
+Author: Swapnxll <130583218+Swapnxll@users.noreply.github.com>
+Date:   Mon Jul 13 02:00:27 2026 +0530
+
+    rag tool added
+
+[33mcommit fa2b9ec2a34d19a34bb83211816b2ac972b6a91f[m
+Author: Swapnxll <130583218+Swapnxll@users.noreply.github.com>
+Date:   Sun Jul 12 22:55:31 2026 +0530
+
+    policies ingested in rag
+
+[33mcommit 05ad965201f4952b43af8b931fde1da01dab4b46[m
+Author: Swapnxll <130583218+Swapnxll@users.noreply.github.com>
+Date:   Fri Jul 10 00:17:42 2026 +0530
+
+    readme updated
+
+[33mcommit 3fd893288921d529f2dcf4f4f8b942c569d956b2[m
+Author: Swapnxll <130583218+Swapnxll@users.noreply.github.com>
+Date:   Fri Jul 10 00:14:49 2026 +0530
+
+    rag initiated
+
+[33mcommit e72611d5bd38c32313a44b341c2e936b279f4e2f[m
+Author: Swapnxll <130583218+Swapnxll@users.noreply.github.com>
+Date:   Thu Jul 9 20:35:35 2026 +0530
+
+    security agent added
+
+[33mcommit ddc76581ddad109f71727cb8b0bb45d67d1fb5bc[m
+Author: Swapnxll <130583218+Swapnxll@users.noreply.github.com>
+Date:   Thu Jul 9 15:04:04 2026 +0530
+
+    quality agent done
+
+[33mcommit 93728a64cc8b45e350a5267544d900b647048cc2[m
+Author: Swapnxll <130583218+Swapnxll@users.noreply.github.com>
+Date:   Thu Jul 9 00:54:42 2026 +0530
+
+    worker agent done with tools-3
+
+[33mcommit 382c8b790b8d7a6faa5211ed0967f245fa7eb1a0[m
+Author: Swapnxll <130583218+Swapnxll@users.noreply.github.com>
+Date:   Thu Jul 9 00:41:44 2026 +0530
+
+    planner agent done
+
+[33mcommit ff33ccdd5c70c7776e526d3d0a0d7e8219baaa75[m
+Author: Swapnxll <130583218+Swapnxll@users.noreply.github.com>
+Date:   Thu Jul 9 00:17:19 2026 +0530
+
+    LangGraph Foundation
+
+[33mcommit 9530f8a85f239b6c6d8d767587bf86427d7c2fec[m
+Author: Swapnxll <130583218+Swapnxll@users.noreply.github.com>
+Date:   Thu Jul 9 00:14:01 2026 +0530
+
+    initial template
